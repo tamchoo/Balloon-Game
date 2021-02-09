@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">       
+        <link rel="stylesheet" type="text/css" href="css/appstyle.css"/>
+
+        <!--  Include the raphael library from the jslibs directory  -->
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="jslibs/raphael.js"></script>
+        <!--  Use the require.js module loader, and tell it where our main JavaScript file is  -->
+        <script defer type="text/javascript" src="appscripts/main.js"> </script>
+        <script defer type="text/javascript" src="appscripts/scale.raphael.js"> </script>
+        <title>BISHI BASHI</title>
+    </head>
+
+  <body>
+
+    <div class="prompt">
+    </div>
+
+    <div class="landingcontainer">
+      <header class="header" id="header">
+        <h1>Bishi Bashi</h1>
+      </header>
+
+      <article class="titles" id="roomstitle"><P><span>Rooms</span></P>  </article>
+      <article class="titles" id="explanation"><p>If you want to play with friends, join a room to play in versus mode.<br>If you want to play by yourself, scroll down to the game to start individual mode</p></article>
+      <div class="grid-container">
+        <div class="rooms">
+          <a href="#game" class="roombutton">Room 1</a>
+          <p>Occupancy: <span id="Room1">0</span><span>/2</span></p>
+        </div>
+        <div class="rooms">
+          <a href="#game" class="roombutton">Room 2</a>
+          <p>Occupancy: <span id="Room2">0</span><span>/2</span></p>
+        </div>
+        <div class="rooms">
+          <a href="#game" class="roombutton">Room 3</a>
+          <p>Occupancy: <span id="Room3">0</span><span>/2</span></p>
+        </div>
+        <div class="rooms">
+          <a href="#game" class="roombutton">Room 4</a>
+          <p>Occupancy: <span id="Room4">0</span><span>/2</span></p>
+        </div>
+        <div class="rooms">
+          <a href="#game" class="roombutton">Room 5</a>
+          <p>Occupancy: <span id="Room5">0</span><span>/2</span></p>
+        </div>
+        <div class="rooms">
+          <a href="#game" class="roombutton">Room 6</a>
+          <p>Occupancy: <span id="Room6">0</span><span>/2</span></p>
+        </div>
+        <div class="rooms">
+          <a href="#game" class="roombutton">Room 7</a>
+          <p>Occupancy: <span id="Room7">0</span><span>/2</span></p>
+        </div>
+        <div class="rooms">
+          <a href="#game" class="roombutton">Room 8</a>
+          <p>Occupancy: <span id="Room8">0</span><span>/2</span></p>
+        </div>
+        <div class="rooms">
+          <a href="#game" class="roombutton">Room 9</a>
+          <p>Occupancy: <span id="Room9">0</span><span>/2</span></p>
+        </div>
+      </div>
+      <!-- Ditto the previous note about <aside>. -->
+      <!-- <aside class="sidebar" id="aside"> -->
+      <!-- </aside> -->
+    </div>
+
+    <div class="container" id="game">
+      <header class="header" id="header">
+        <h1 id="roomNoHeader">Individual MODE</h1>
+      </header>
+
+      <article class="titles"><P><span>INSTRUCTIONS</span></P>  </article>
+      <article class="titles"><p><span id="username">YOU</span></p></article>
+      <article class="titles" id="rowsLeftHeader"><p><span>ROWS LEFT</span></p></article>
+      <article class="titles"><p><span id="oppusername">...</span></p></article>
+
+      <nav class="sidebar" id="nav">
+        <p id="startbuttinstruct">press start to play</p>
+        <button type="button" id="Start" >START</button>
+        <button type="button" id="Mode" >Individual Mode</button>
+        <p>Pop the balloons using the keys J, K & L, which corresponds to columns 1, 2 and 3</p>
+        <p>The first to pop all their balloons win!</p>
+
+      </nav>
+
+      <article class="content" id="centerDiv">
+      </article>
+
+      <article class="rowsleft" id="rowsYou"></article>
+      <article class="rowsleft" id="rowsOpp"></article>
+
+      <!-- Ditto the previous note about <aside>. -->
+      <aside class="sidebar" id="aside">
+      </aside>
+    </div>
+
+     <script>
+          // let iosocket = io.connect();
+          // console.log("test")
+          // let buttons =  document.getElementsByClassName("roombutton");
+          // console.log(buttons.length)
+          // for(var i =0; i<buttons.length; i++){
+          //   // console.log(buttons[i])
+          //   buttons[i].addEventListener("click", function (event) { 
+          //     let roomNo = event.target.innerHTML;
+          //     iosocket.emit('roomID',roomNo)
+          //     console.log(roomNo)
+          //   })
+          // } 
+
+    </script>
+</html>
+
